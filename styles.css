@@ -1,14 +1,15 @@
 body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    
+    
     background-color: black;
 
 }
 
 *{
     font-family: 'MedievalSharp';
-
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 section{
@@ -19,7 +20,8 @@ section{
     justify-content: center;
 
 }
-/* 4019 3313 */
+/* 4019 3313 
+   321  265*/
 .mapGrid{
     width: 4019px;
     height: 3313px;
@@ -31,7 +33,6 @@ section{
     grid-template-columns: 1px repeat(321, 12.5px);
     grid-template-rows: repeat(265, 12.5px);
 
-
 }
 
 .tile{
@@ -40,13 +41,21 @@ section{
     grid-column: 111;  /* 266 - 5*/
     grid-row: 111;  /* 192 - 80*/
     border: 2px solid #0aff02;
-    box-shadow: 0 0 30px 50px #0aff02c5;
+    /* box-shadow: 0 0 30px 50px #0aff02c5; */
+}
 
-    animation: glow 1s ease-in-out infinite;
-
+.tileToHover{
+    position: relative;
+    z-index: 2;
+    border: 2px solid white;
+    box-shadow: 0 0 80px 15px #f6fff6;
 
 }
 
+.glowy{
+    animation: glow 1s ease-in-out infinite;
+
+}
 @keyframes glow {
     0%{box-shadow: 0 0 30px 5px #0aff028f;}
     50%{box-shadow: 0 0 30px 50px #0aff02;}
@@ -56,46 +65,153 @@ section{
 
 .lowBar{
     display: flex;
-    justify-content: end;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 1vw;
 
     position:fixed;
     width: 50vw;
     height: 15vh;
 
     bottom: 2%;
-    left: 2%;
+    left: 2%;;
 
-    background-image: url('toolsBg.webp'); 
+    background-image: url('toolsBg2.jpg'); 
     background-size: cover;
+
+    overflow: hidden;
+
+    /* border-radius: 0.2vw; */
+    border-radius: 5% 5% 0% 0% / 50% 50% 30% 30%  ;
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw #721408;
 
 }
 
-.tileFinder{ 
+.lowBarSection{ 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    
 
-    background-color: #0f3d3379;
+    background-color: #412e0518;
 
     width: 25%;
     height: 90%;
 
     gap: 0.3vw;
-}
-.tileFinder > button{
 
-    width: 90%;
-    height: 45%;
-    font-size: 1.2vw;
+    border-radius: 0.2vw;
+
+}
+
+.lowBarSection:nth-child(1) > h1{
+    font-size: 1.4vw;
     font-weight: 900;
+    color: white;
+    text-shadow: 0.1vw 0.1vw 0.5vw black;
+
+    padding: 0;
+    padding-top: 1vh;
+    margin:0;
+}
+.lowBarSection:nth-child(1) > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1vw;
+
+    height: 60%;
+    width: 100%;
+    
+    overflow: hidden;
+}
+
+.lowBarSection:nth-child(1) button{
+    width: 19%;
+    height: 40%;
+    font-size: 0.55vw;
+    font-weight: 600;
+    color: white;
+
+
+    border-radius: 0.5vw;
+    border-width: 0.2vw;
+
+    background-color: #083806;
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+.lowBarSection:nth-child(2) > h1{
+    opacity: 0.4;
+    font-size: 1.4vw;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0.1vw 0.1vw 0.5vw black;
+
+    padding: 0;
+    padding-top: 1vh;
+    margin:0;
+}
+.lowBarSection:nth-child(2) > div{
+    opacity: 0.4;
+    /* background-color: #0aff02; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.1vw;
+    /* flex-direction: column; */
+    /* grid-template-columns:  1fr; */
+    /* grid-template-rows: 1fr; */
+    justify-items: center;
+    align-items: start;
+
+    height: 60%;
+    width: 100%;
+
+    overflow: hidden;
+
+}
+.lowBarSection:nth-child(2) button{
+    pointer-events: none;
+    width: 30%;
+    height: 45%;
+    font-size: 0.8vw;
+    font-weight: 600;
+    color: white;
+
 
     border-radius: 0.5vw;
     border-width: 0.2vw;
 
     background-color: #721408;
+}
+.lowBarSection:nth-child(2) button:nth-child(1){
+    background-color: #808080a1;
+}
+.lowBarSection:nth-child(2) button:nth-child(2){
+    background-color: #07c721a1;
+}
+.lowBarSection:nth-child(2) button:nth-child(3){
+    background-color: #5311bda1;
+}
+
+
+/* ///////////////////////////////////////////////////////////////// */
+
+.lowBarSection:last-child > button{
+
+    width: 90%;
+    height: 45%;
+    font-size: 1.2vw;
+    font-weight: 900;
     color: white;
+    
+
+    border-radius: 0.5vw;
+    border-width: 0.2vw;
+
+    background-color: #721408;
 }
 .coordinates{
     display: grid;
@@ -122,7 +238,7 @@ section{
 
 }
 
-.tileFinder input{
+.lowBarSection input{
     width: 100%;
     height: 100%;
 
@@ -149,3 +265,4 @@ input::-webkit-inner-spin-button {
     margin: 0; 
 }
 
+/* ///////////////////////////////////////////////////////////////// */
