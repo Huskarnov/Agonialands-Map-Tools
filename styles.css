@@ -2,11 +2,14 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-body{
     background-color: black;
+
 }
 
+*{
+    font-family: 'MedievalSharp';
+
+}
 /* 4019 3313 */
 
 section{
@@ -33,10 +36,10 @@ section{
 }
 
 .tile{
-    /* display: none; */
+    display: none;
     position: relative;
-    grid-column: 261;  /* 266 */
-    grid-row: 112;  /* 192 */
+    grid-column: 261;  /* 266 - 5*/
+    grid-row: 112;  /* 192 - 80*/
     border: 2px solid #0aff02;
     box-shadow: 0 0 30px 50px #0aff02c5;
 
@@ -51,6 +54,7 @@ section{
     100%{box-shadow: 0 0 30px 5px #0aff028f;}
 }
 
+
 .lowBar{
     display: flex;
     justify-content: end;
@@ -63,8 +67,11 @@ section{
     bottom: 2%;
     left: 2%;
 
+    background-image: url('toolsBg.webp'); 
+    background-size: cover;
+    
     /* padding: 15px; */
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
 
 .tileFinder{ 
@@ -73,7 +80,7 @@ section{
     align-items: center;
     justify-content: center;
 
-    background-color: #0aff02;
+    background-color: #0f3d3379;
 
     width: 25%;
     height: 90%;
@@ -81,13 +88,17 @@ section{
     gap: 0.3vw;
 }
 .tileFinder > button{
-    width: 80%;
+
+    width: 90%;
     height: 45%;
     font-size: 1.2vw;
     font-weight: 900;
 
-    border-radius: 1vw;
+    border-radius: 0.5vw;
     border-width: 0.2vw;
+
+    background-color: #721408;
+    color: white;
 }
 .coordinates{
     display: grid;
@@ -101,7 +112,7 @@ section{
     height: 50%;
     width: 100%;
 
-    background-color: blue;
+    /* background-color: blue; */
 
     overflow: hidden;
 }
@@ -110,11 +121,12 @@ section{
     display: flex;
     overflow: hidden;
 
-    height: 80%;
+    height: 70%;
     width: 80%;
 
-    background-color: yellow;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw black;
+
 }
 
 .tileFinder input{
@@ -135,6 +147,9 @@ section{
     white-space:unset;
     /* border-radius: 1vw; */
     /* background-color: aqua; */
+
+    background-color: #000000af;
+    color: white;
 
 }
 input::-webkit-outer-spin-button,
