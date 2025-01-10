@@ -3,38 +3,143 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 
+/* 4019 3313 */
 
+section{
+    width: auto;
+    height: auto;
 
-/* rows: 81 to 345
-collumns */
-.theGrid{
+    display: flex;
+    justify-content: center;
+
+}
+
+.mapGrid{
+    width: 4019px;
+    height: 3313px;
+
     background-image: url('map.webp'); 
-    /* background-repeat: no-repeat; */
     background-size: cover;
-    height:  3313px; 
-    width:  4019px;
-   
-    /* height:  calc(100vw * 0.82433);
-    width: 100vw; */
-
+    
     display: grid;
-    grid-template-columns: repeat(321, 12.5px);
+    grid-template-columns: 1px repeat(321, 12.5px);
     grid-template-rows: repeat(265, 12.5px);
-    /* gap: 0.05px; */
-
-    /* overflow: hidden; */
-    /* scrollbar-gutter: unset; */
-    gap: 0;
 
 
 }
 
-
-
 .tile{
-    background-color: red;
-    grid-column: 321;
-    grid-row: 120;
+    /* display: none; */
+    position: relative;
+    grid-column: 261;  /* 266 */
+    grid-row: 112;  /* 192 */
+    border: 2px solid #0aff02;
+    box-shadow: 0 0 30px 50px #0aff02c5;
+
+    animation: glow 1s ease-in-out infinite;
+
+
+}
+
+@keyframes glow {
+    0%{box-shadow: 0 0 30px 5px #0aff028f;}
+    50%{box-shadow: 0 0 30px 50px #0aff02;}
+    100%{box-shadow: 0 0 30px 5px #0aff028f;}
+}
+
+.lowBar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    position:fixed;
+    width: 50vw;
+    height: 15vh;
+
+    bottom: 2%;
+    left: 2%;
+
+    /* padding: 15px; */
+    background-color: rebeccapurple;
+}
+
+.tileFinder{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0aff02;
+
+    width: 25%;
+    height: 90%;
+
+    gap: 0.3vw;
+}
+.tileFinder > button{
+    width: 80%;
+    height: 45%;
+    font-size: 1.2vw;
+    font-weight: 900;
+
+    border-radius: 1vw;
+    border-width: 0.2vw;
+}
+.coordinates{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+
+    /* gap: 5%; */
+
+    height: 50%;
+    width: 100%;
+
+    background-color: blue;
+
+    overflow: hidden;
+}
+
+.inputWrapper{
+    display: flex;
+    overflow: hidden;
+
+    height: 80%;
+    width: 80%;
+
+    background-color: yellow;
+    border-radius: 1vw;
+}
+
+.tileFinder input{
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.2vw;
+    font-weight: 600;
+
+    border:none;
+    outline: none;
+    padding: none;
+    margin: none;
+
+    text-align: center;
+    text-indent: 0;
+    line-height: 0;
+    white-space:unset;
+    /* border-radius: 1vw; */
+    /* background-color: aqua; */
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0; 
 }
 
