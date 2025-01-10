@@ -1,11 +1,11 @@
 const metals = {
     copper : []
 };
-
+// 
 const quests = [
-    [],
-    [],
-    [],
+    [[313,186], [305, 177],[288,192],[303, 191],[312, 180]],
+    [[294,193],[297,198],[277,201],[282,205],[290,212]],
+    [[274,198],[282,168],[283,210],[250,197],[284,227]],
     [],
     [],
     [],
@@ -50,8 +50,10 @@ mapGrid.addEventListener('click', (event) =>{
     inputX.value = collumnX + 5;
     inputY.value =rowY + 80;    
 
-    if(mapGrid.children.length >1){
-    mapGrid.removeChild(mapGrid.children[1]);   
+    if(mapGrid.children.length > 1){
+        for( let i = mapGrid.children.length -1; i >= 1; i--){
+            mapGrid.removeChild(mapGrid.children[i]);   
+        };
     }
 
     mapGrid.appendChild(clickedTile);
@@ -77,6 +79,12 @@ findTileButton.addEventListener('click',(e)=>{
     tile.classList.add('glowy');
     tile.style.display = 'block';
 
+    if(mapGrid.children.length > 1){
+        for( let i = mapGrid.children.length -1; i >= 1; i--){
+            mapGrid.removeChild(mapGrid.children[i]);   
+        };
+    }
+
     setTimeout(() => {
     tile.classList.remove('glowy');
         
@@ -92,8 +100,47 @@ findTileButton.addEventListener('click',(e)=>{
 });
 // //////////////////////////////////////////////////////////
 
-for (let i = 9; i >= 1; i--){
-    questButtonsWrapper[i].addEventListener('click', (event) => {
+//give quest buttons activation
+for (let i = 0; i <= 8; i++){
+    questButtonsWrapper.children[i].addEventListener('click', (event) => {
 
-    });
+        // if (mapGrid.children.length > 0){
+        //     for(let c = mapGrid.children.length - 1; c >= 1; c--){
+
+        //         const childToRemove = mapGrid.children[c];
+        //         mapGrid.removeChild(childToRemove);
+        //         console.log('x');
+
+        //     };
+        // };
+        if(mapGrid.children.length > 1){
+            for( let i = mapGrid.children.length -1; i >= 1; i--){
+                mapGrid.removeChild(mapGrid.children[i]);   
+            };
+        }
+        
+
+        for( let y = quests[i].length - 1; y >=0; y--){
+        
+
+                const gridXcoord = (quests[i])[y][0] - 5;
+                const gridYcoord = (quests[i])[y][1] - 80;
+
+                console.log(gridXcoord, gridYcoord);
+
+                const questMarker = document.createElement('div');
+                questMarker.style.gridColumn = `${gridXcoord}`;
+                questMarker.style.gridRow = `${gridYcoord}`;
+                questMarker.classList.add('tile');
+                questMarker.classList.add('glowy');
+                questMarker.style.display = 'block';
+                mapGrid.appendChild(questMarker);
+                tile.style.display ='none';
+                
+
+            };
+
+        }
+    );
 };
+// //////////////////////////////////////////////////////////
