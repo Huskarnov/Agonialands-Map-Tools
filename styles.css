@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* rows: 81 to 345
+collumns */
+.theGrid{
+    background-image: url('map.webp'); 
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height:  3313px; 
+    width:  4019px;
+   
+    /* height:  calc(100vw * 0.82433);
+    width: 100vw; */
+
+    display: grid;
+    grid-template-columns: repeat(321, 12.5px);
+    grid-template-rows: repeat(265, 12.5px);
+    /* gap: 0.05px; */
+
+    /* overflow: hidden; */
+    /* scrollbar-gutter: unset; */
+    gap: 0;
+
+
+}
+
+
+
+.tile{
+    background-color: red;
+    grid-column: 321;
+    grid-row: 120;
+}
+
