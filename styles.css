@@ -36,10 +36,10 @@ section{
 }
 
 .tile{
-    /* display: none; */
+    display: none;
     position: relative;
-    grid-column: 111;  /* 266 - 5*/
-    grid-row: 111;  /* 192 - 80*/
+    grid-column: 1;  /* 266 - 5*/
+    grid-row: 1;  /* 192 - 80*/
     border: 2px solid #0aff02;
     /* box-shadow: 0 0 30px 50px #0aff02c5; */
 }
