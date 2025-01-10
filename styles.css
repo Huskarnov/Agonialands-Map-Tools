@@ -10,7 +10,6 @@ body{
     font-family: 'MedievalSharp';
 
 }
-/* 4019 3313 */
 
 section{
     width: auto;
@@ -20,7 +19,7 @@ section{
     justify-content: center;
 
 }
-
+/* 4019 3313 */
 .mapGrid{
     width: 4019px;
     height: 3313px;
@@ -69,9 +68,7 @@ section{
 
     background-image: url('toolsBg.webp'); 
     background-size: cover;
-    
-    /* padding: 15px; */
-    /* background-color: rebeccapurple; */
+
 }
 
 .tileFinder{ 
@@ -107,12 +104,8 @@ section{
     justify-items: center;
     align-items: center;
 
-    /* gap: 5%; */
-
     height: 50%;
     width: 100%;
-
-    /* background-color: blue; */
 
     overflow: hidden;
 }
@@ -145,8 +138,6 @@ section{
     text-indent: 0;
     line-height: 0;
     white-space:unset;
-    /* border-radius: 1vw; */
-    /* background-color: aqua; */
 
     background-color: #000000af;
     color: white;
