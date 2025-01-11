@@ -29,7 +29,8 @@ const findTileButton = document.querySelector('.lowBarSection:last-child button'
 const tile = document.querySelector('.tile');
 const inputX = document.querySelector('#xCoord');
 const inputY = document.querySelector('#yCoord');
-let previousTile ;
+const inputWrapperX = document.querySelector('.inputWrapper:nth-child(1)');
+const inputWrapperY = document.querySelector('.inputWrapper:nth-child(2)');
 
 const questButtonsWrapper = document.querySelector('.lowBarSection:nth-child(1) > div');
 const metalButtonsWrapper = document.querySelector('.lowBarSection:nth-child(2) > div');
@@ -58,22 +59,18 @@ mapGrid.addEventListener('click', (event) =>{
     inputX.value = collumnX + 5;
     inputY.value =rowY + 80;    
 
-    if(mapGrid.children.length > 1){ //remove all other tiles
-        for( let i = mapGrid.children.length -1; i >= 1; i--){
-            mapGrid.removeChild(mapGrid.children[i]);   
-        };
-    }
+    clearGrid();
 
     mapGrid.appendChild(clickedTile); //After clean up !!!
 
-    // inputX.classList.remove('shine');
-    // inputY.classList.remove('shine');
-    inputX.classList.add('shine');
-    inputY.classList.add('shine');
+    inputWrapperX.classList.remove('shine');
+    inputWrapperY.classList.remove('shine');
+    inputWrapperX.classList.add('shine');
+    inputWrapperY.classList.add('shine');
 
 
     }else{
-        mapGrid.removeChild(mapGrid.children[1]);
+        clearGrid();
     };
     
 });
@@ -91,11 +88,7 @@ findTileButton.addEventListener('click',(e)=>{
     tile.classList.add('glowy');
     tile.style.display = 'block';
 
-    if(mapGrid.children.length > 1){
-        for( let i = mapGrid.children.length -1; i >= 1; i--){
-            mapGrid.removeChild(mapGrid.children[i]);   
-        };
-    }
+    clearGrid();
 
     setTimeout(() => {
     tile.classList.remove('glowy');
@@ -116,11 +109,7 @@ findTileButton.addEventListener('click',(e)=>{
 for (let i = 0; i <= 8; i++){
     questButtonsWrapper.children[i].addEventListener('click', (event) => {
 
-        if(mapGrid.children.length > 1){
-            for( let x = mapGrid.children.length -1; x >= 1; x--){
-                mapGrid.removeChild(mapGrid.children[x]);   
-            };
-        }
+        clearGrid();
         
 
         for( let y = quests[i].length - 1; y >=0; y--){
@@ -144,3 +133,11 @@ for (let i = 0; i <= 8; i++){
     );
 };
 // //////////////////////////////////////////////////////////
+
+let clearGrid = function(){
+    if(mapGrid.children.length > 1){ //remove all other tiles
+        for( let i = mapGrid.children.length -1; i >= 1; i--){
+            mapGrid.removeChild(mapGrid.children[i]);   
+        };
+    }
+};

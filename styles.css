@@ -62,20 +62,14 @@ section{
 }
 
 .shine{
-    /* box-shadow: 0 0 30px 5px #0aff028f; */
-    background-color: red;
-
-    /* animation: shiny 0.5s ease-in-out 2; */
+    animation: shiny 1s ease-in-out 3;
 }
 
 @keyframes shiny {
-    /* 0%{background-color: red;}
-    50%{background-color: red;}
-    100%{background-color: red;} */
 
-    /* 0%{box-shadow: 0 0 30px 5px #0aff028f;}
-    50%{box-shadow: 0 0 30px 50px #0aff02;}
-    100%{box-shadow: 0 0 30px 5px #0aff028f;} */
+    0%{box-shadow: 0 0 30px 0px #ffffffff inset;}
+    50%{box-shadow: 0 0 30px 50px #ffffffff inset;}
+    100%{box-shadow: 0 0 30px 0px #ffffffff inset;}
 }
 
 .lowBar{
