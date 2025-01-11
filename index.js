@@ -106,61 +106,93 @@ findTileButton.addEventListener('click',(e)=>{
 // //////////////////////////////////////////////////////////
 
 //give quest buttons activation
-for (let i = 0; i <= 8; i++){
-    questButtonsWrapper.children[i].addEventListener('click', (event) => {
+// for (let i = 0; i <= 8; i++){
+//     questButtonsWrapper.children[i].addEventListener('click', (event) => {
 
-        clearGrid();
+//         clearGrid();
         
 
-        for( let y = quests[i].length - 1; y >=0; y--){
+//         for( let y = quests[i].length - 1; y >=0; y--){
         
-                const gridXcoord = (quests[i])[y][0] - 5;
-                const gridYcoord = (quests[i])[y][1] - 80;
+//                 const gridXcoord = (quests[i])[y][0] - 5;
+//                 const gridYcoord = (quests[i])[y][1] - 80;
 
-                const questMarker = document.createElement('div');
-                questMarker.style.gridColumn = `${gridXcoord - 1}`;
-                questMarker.style.gridRow = `${gridYcoord}`;
-                questMarker.classList.add('tile');
-                questMarker.classList.add('glowy');
-                questMarker.style.display = 'block';
-                mapGrid.appendChild(questMarker);
+//                 const questMarker = document.createElement('div');
+//                 questMarker.style.gridColumn = `${gridXcoord - 1}`;
+//                 questMarker.style.gridRow = `${gridYcoord}`;
+//                 questMarker.classList.add('tile');
+//                 questMarker.classList.add('glowy');
+//                 questMarker.style.display = 'block';
+//                 mapGrid.appendChild(questMarker);
 
-                tile.style.display ='none';
+//                 tile.style.display ='none';
                 
-            };
+//             };
 
-        }
-    );
+//         }
+//     );
+// };
+// //////////////////////////////////////////////////////////
+
+// for (let g = 0; g <= 3; g++){
+//     metalButtonsWrapper.children[g].addEventListener('click', (event) => {
+
+//         clearGrid();
+        
+
+//         for( let y = metals[g].length - 1; y >=0; y--){
+        
+//                 const gridXcoord = (metals[g])[y][0] - 5;
+//                 const gridYcoord = (metals[g])[y][1] - 80;
+
+//                 const metalMarker = document.createElement('div');
+//                 metalMarker.style.gridColumn = `${gridXcoord - 1}`;
+//                 metalMarker.style.gridRow = `${gridYcoord}`;
+//                 metalMarker.classList.add('tile');
+//                 metalMarker.classList.add('glowy');
+//                 metalMarker.style.display = 'block';
+//                 mapGrid.appendChild(metalMarker);
+
+//                 tile.style.display ='none';
+                
+//             };
+
+//         }
+//     );
+// };
+// //////////////////////////////////////////////////////////
+const buttonsEvents = function(data, buttonWrapper){
+    for (let g = 0; g <= buttonWrapper.children.length - 1; g++){
+        buttonWrapper.children[g].addEventListener('click', (event) => {
+    
+            clearGrid();
+            
+    
+            for( let y = data[g].length - 1; y >=0; y--){
+            
+                    const gridXcoord = (data[g])[y][0] - 5;
+                    const gridYcoord = (data[g])[y][1] - 80;
+    
+                    const metalMarker = document.createElement('div');
+                    metalMarker.style.gridColumn = `${gridXcoord - 1}`;
+                    metalMarker.style.gridRow = `${gridYcoord}`;
+                    metalMarker.classList.add('tile');
+                    metalMarker.classList.add('glowy');
+                    metalMarker.style.display = 'block';
+                    mapGrid.appendChild(metalMarker);
+    
+                    tile.style.display ='none';
+                    
+                };
+    
+            }
+        );
+    };
 };
 // //////////////////////////////////////////////////////////
 
-for (let g = 0; g <= 3; g++){
-    metalButtonsWrapper.children[g].addEventListener('click', (event) => {
-
-        clearGrid();
-        
-
-        for( let y = metals[g].length - 1; y >=0; y--){
-        
-                const gridXcoord = (metals[g])[y][0] - 5;
-                const gridYcoord = (metals[g])[y][1] - 80;
-
-                const metalMarker = document.createElement('div');
-                metalMarker.style.gridColumn = `${gridXcoord - 1}`;
-                metalMarker.style.gridRow = `${gridYcoord}`;
-                metalMarker.classList.add('tile');
-                metalMarker.classList.add('glowy');
-                metalMarker.style.display = 'block';
-                mapGrid.appendChild(metalMarker);
-
-                tile.style.display ='none';
-                
-            };
-
-        }
-    );
-};
-// //////////////////////////////////////////////////////////
+buttonsEvents(quests, questButtonsWrapper);
+buttonsEvents(metals, metalButtonsWrapper);
 
 let clearGrid = function(){
     if(mapGrid.children.length > 1){ //remove all other tiles
