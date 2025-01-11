@@ -30,7 +30,7 @@ section{
     background-size: cover;
     
     display: grid;
-    grid-template-columns: 1px repeat(321, 12.5px);
+    grid-template-columns: repeat(321, 12.5px);
     grid-template-rows: repeat(265, 12.5px);
 
 }
@@ -41,7 +41,6 @@ section{
     grid-column: 1;  /* 266 - 5*/
     grid-row: 1;  /* 192 - 80*/
     border: 2px solid #0aff02;
-    /* box-shadow: 0 0 30px 50px #0aff02c5; */
 }
 
 .tileToHover{
@@ -62,6 +61,22 @@ section{
     100%{box-shadow: 0 0 30px 5px #0aff028f;}
 }
 
+.shine{
+    /* box-shadow: 0 0 30px 5px #0aff028f; */
+    background-color: red;
+
+    /* animation: shiny 0.5s ease-in-out 2; */
+}
+
+@keyframes shiny {
+    /* 0%{background-color: red;}
+    50%{background-color: red;}
+    100%{background-color: red;} */
+
+    /* 0%{box-shadow: 0 0 30px 5px #0aff028f;}
+    50%{box-shadow: 0 0 30px 50px #0aff02;}
+    100%{box-shadow: 0 0 30px 5px #0aff028f;} */
+}
 
 .lowBar{
     display: flex;
@@ -81,7 +96,6 @@ section{
 
     overflow: hidden;
 
-    /* border-radius: 0.2vw; */
     border-radius: 5% 5% 0% 0% / 50% 50% 30% 30%  ;
     box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw #721408;
 
@@ -103,6 +117,9 @@ section{
 
     border-radius: 0.2vw;
 
+}
+button, h1{
+    user-select: none;
 }
 /* ///////////////////////////////////////////////////////////////// */
 
@@ -144,8 +161,7 @@ section{
 
 /* ///////////////////////////////////////////////////////////////// */
 .lowBarSection:nth-child(2) > h1{
-    /* opactity TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    opacity: 0.4;
+
     font-size: 1.4vw;
     font-weight: 900;
     color: white;
@@ -156,8 +172,7 @@ section{
     margin:0;
 }
 .lowBarSection:nth-child(2) > div{
-    /* opactity TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    opacity: 0.4;
+
 
     display: flex;
     justify-content: center;
@@ -174,8 +189,6 @@ section{
 
 }
 .lowBarSection:nth-child(2) button{
-    /* event NONE TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    pointer-events: none;
 
     width: 30%;
     height: 45%;
@@ -190,13 +203,24 @@ section{
     background-color: #721408;
 }
 .lowBarSection:nth-child(2) button:nth-child(1){
-    background-color: #808080a1;
+    background: linear-gradient(117deg, rgba(90,99,89,1) 13%, rgba(114,134,110,1) 29%, rgba(115,135,113,1) 33%, rgba(57,79,56,1) 50%, rgba(86,99,82,1) 72%, rgba(123,142,127,1) 88%, rgba(67,80,66,1) 100%);
+
 }
 .lowBarSection:nth-child(2) button:nth-child(2){
-    background-color: #07c721a1;
+    background: linear-gradient(27deg, rgba(126,195,116,1) 13%, rgba(35,160,15,1) 29%, rgba(33,139,25,1) 33%, rgba(33,136,28,1) 50%, rgba(34,94,19,1) 72%, rgba(22,118,43,1) 88%, rgba(126,195,116,1) 100%);
+
 }
 .lowBarSection:nth-child(2) button:nth-child(3){
-    background-color: #5311bda1;
+    background: linear-gradient(108deg, rgba(91,38,28,1) 13%, rgba(103,38,17,1) 29%, rgba(85,44,31,1) 33%, rgba(92,56,42,1) 50%, rgba(91,39,27,1) 72%, rgba(79,45,36,1) 88%, rgba(55,35,28,1) 100%);
+
+}
+.lowBarSection:nth-child(2) button:nth-child(4){
+    background: linear-gradient(146deg, rgba(24,118,108,1) 0%, rgba(7,19,7,1) 12%, rgba(74,47,20,1) 49%, rgba(7,19,7,1) 88%, rgba(24,118,108,1) 100%);
+
+}
+.lowBarSection:nth-child(2) button:nth-child(5){
+    background: linear-gradient(189deg, rgba(221,184,96,1) 13%, rgba(163,139,14,1) 29%, rgba(133,118,25,1) 33%, rgba(154,112,35,1) 50%, rgba(117,83,22,1) 72%, rgba(123,110,22,1) 88%, rgba(223,186,97,1) 100%);
+
 }
 
 
@@ -210,7 +234,6 @@ section{
     font-weight: 900;
     color: white;
     
-
     border-radius: 0.5vw;
     border-width: 0.2vw;
 
@@ -260,6 +283,8 @@ section{
 
     background-color: #000000af;
     color: white;
+
+    
 
 }
 input::-webkit-outer-spin-button,

@@ -1,7 +1,12 @@
-// const metals = {
-//     copper : []
-// };
-// 
+const metals = [
+    [[]],
+    [],
+    [],
+    [],
+    []
+];
+// [],[],[],[],[],[],[],[],[],[],[],
+
 const quests = [
     [[313,186], [305, 177],[288,192],[303, 191],[312, 180]],
     [[294,193],[297,198],[277,201],[282,205],[290,212]],
@@ -14,6 +19,8 @@ const quests = [
     [[245,132],[215,189],[190,194],[204,161]]
 ];
 
+
+
 /* 4019 3313
     321 265 */
 
@@ -25,6 +32,7 @@ const inputY = document.querySelector('#yCoord');
 let previousTile ;
 
 const questButtonsWrapper = document.querySelector('.lowBarSection:nth-child(1) > div');
+const metalButtonsWrapper = document.querySelector('.lowBarSection:nth-child(2) > div');
 
 // ////////////////////GET TILE COORDS////////////////////////////
 mapGrid.addEventListener('click', (event) =>{
@@ -56,11 +64,18 @@ mapGrid.addEventListener('click', (event) =>{
         };
     }
 
-    mapGrid.appendChild(clickedTile);
+    mapGrid.appendChild(clickedTile); //After clean up !!!
+
+    // inputX.classList.remove('shine');
+    // inputY.classList.remove('shine');
+    inputX.classList.add('shine');
+    inputY.classList.add('shine');
+
 
     }else{
         mapGrid.removeChild(mapGrid.children[1]);
     };
+    
 });
 
 // //////////////////////////////////////////////////////////
