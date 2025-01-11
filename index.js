@@ -49,7 +49,7 @@ mapGrid.addEventListener('click', (event) =>{
     let clickedTile = document.createElement('div');
     clickedTile.style.width = '12.5px';
     clickedTile.style.height = '12.5px';
-    clickedTile.style.gridColumn = `${collumnX}`;
+    clickedTile.style.gridColumn = `${collumnX - 1}`;
     clickedTile.style.gridRow = `${rowY}`
     clickedTile.classList.add('glowy');
     clickedTile.classList.add('tile');
@@ -83,7 +83,7 @@ findTileButton.addEventListener('click',(e)=>{
 
     if(inputX.value > 5 && inputX.value < 328 && inputY.value > 80 && inputY.value < 346){
 
-    tile.style.gridColumn  = `${inputX.value - 5}`;
+    tile.style.gridColumn  = `${inputX.value - 6}`;
     tile.style.gridRow  = `${inputY.value - 80}`;
     tile.classList.add('glowy');
     tile.style.display = 'block';
@@ -118,7 +118,7 @@ for (let i = 0; i <= 8; i++){
                 const gridYcoord = (quests[i])[y][1] - 80;
 
                 const questMarker = document.createElement('div');
-                questMarker.style.gridColumn = `${gridXcoord}`;
+                questMarker.style.gridColumn = `${gridXcoord - 1}`;
                 questMarker.style.gridRow = `${gridYcoord}`;
                 questMarker.classList.add('tile');
                 questMarker.classList.add('glowy');
