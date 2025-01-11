@@ -212,10 +212,10 @@ button, h1{
     background: linear-gradient(146deg, rgba(24,118,108,1) 0%, rgba(7,19,7,1) 12%, rgba(74,47,20,1) 49%, rgba(7,19,7,1) 88%, rgba(24,118,108,1) 100%);
 
 }
-.lowBarSection:nth-child(2) button:nth-child(5){
+/* .lowBarSection:nth-child(2) button:nth-child(5){
     background: linear-gradient(189deg, rgba(221,184,96,1) 13%, rgba(163,139,14,1) 29%, rgba(133,118,25,1) 33%, rgba(154,112,35,1) 50%, rgba(117,83,22,1) 72%, rgba(123,110,22,1) 88%, rgba(223,186,97,1) 100%);
 
-}
+} */
 
 
 /* ///////////////////////////////////////////////////////////////// */
