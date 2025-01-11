@@ -3,6 +3,10 @@ body{
     
     background-color: black;
 
+
+
+
+
 }
 
 *{
@@ -13,11 +17,11 @@ body{
 }
 
 section{
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
 
-    display: flex;
-    justify-content: center;
+    display: grid; 
+    justify-items: center;
 
 }
 /* 4019 3313 
@@ -70,6 +74,8 @@ section{
     0%{box-shadow: 0 0 30px 0px #ffffffff inset;}
     50%{box-shadow: 0 0 30px 50px #ffffffff inset;}
     100%{box-shadow: 0 0 30px 0px #ffffffff inset;}
+
+
 }
 
 .lowBar{
@@ -131,7 +137,7 @@ button, h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.1vw;
+    gap: 0.2vw;
 
     height: 60%;
     width: 100%;
@@ -171,7 +177,7 @@ button, h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.1vw;
+    gap: 0.2vw;
 
     justify-items: center;
     align-items: start;
@@ -231,7 +237,7 @@ button, h1{
     border-radius: 0.5vw;
     border-width: 0.2vw;
 
-    background-color: #721408;
+    background-color: #721408e8;
 }
 .coordinates{
     display: grid;
@@ -288,3 +294,30 @@ input::-webkit-inner-spin-button {
 }
 
 /* ///////////////////////////////////////////////////////////////// */
+/* @media (max-width: 800px) {
+    
+.lowBar{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1vw;
+
+    position:fixed;
+    width: 80vw;
+    height: 15vh;
+
+    bottom: 2%;
+    left: 9%;;
+
+    background-image: url('toolsBg2.jpg'); 
+    background-size: cover;
+
+    overflow: hidden;
+
+    border-radius: 5% 5% 0% 0% / 50% 50% 30% 30%  ;
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw #721408;
+
+}
+
+} */
