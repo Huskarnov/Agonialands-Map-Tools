@@ -1,17 +1,17 @@
-const metals = {
-    copper : []
-};
+// const metals = {
+//     copper : []
+// };
 // 
 const quests = [
     [[313,186], [305, 177],[288,192],[303, 191],[312, 180]],
     [[294,193],[297,198],[277,201],[282,205],[290,212]],
     [[274,198],[282,168],[283,210],[250,197],[284,227]],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    [[208,103],[267,209],[263,245],[307,233],[278,287],[274,169]],
+    [[273,194],[284,232],[260,168],[282,306],[245,255],[183,102]],
+    [[247,167],[238,199],[314,215],[262,283],[213,188],[261,146],[217,92]],
+    [[212,171],[194,93],[236,151],[222,265],[231,288]],
+    [[204,207],[211,120],[249,285],[211,220]],
+    [[245,132],[215,189],[190,194],[204,161]]
 ];
 
 /* 4019 3313
@@ -114,19 +114,19 @@ for (let i = 0; i <= 8; i++){
         //     };
         // };
         if(mapGrid.children.length > 1){
-            for( let i = mapGrid.children.length -1; i >= 1; i--){
-                mapGrid.removeChild(mapGrid.children[i]);   
+            for( let x = mapGrid.children.length -1; x >= 1; x--){
+                mapGrid.removeChild(mapGrid.children[x]);   
             };
         }
         
 
         for( let y = quests[i].length - 1; y >=0; y--){
         
-
                 const gridXcoord = (quests[i])[y][0] - 5;
                 const gridYcoord = (quests[i])[y][1] - 80;
 
-                console.log(gridXcoord, gridYcoord);
+                // console.log(gridXcoord, gridYcoord, 'x');
+
 
                 const questMarker = document.createElement('div');
                 questMarker.style.gridColumn = `${gridXcoord}`;
@@ -135,7 +135,9 @@ for (let i = 0; i <= 8; i++){
                 questMarker.classList.add('glowy');
                 questMarker.style.display = 'block';
                 mapGrid.appendChild(questMarker);
+
                 tile.style.display ='none';
+                console.log('step');
                 
 
             };
