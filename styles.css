@@ -144,6 +144,7 @@ section{
 
 /* ///////////////////////////////////////////////////////////////// */
 .lowBarSection:nth-child(2) > h1{
+    /* opactity TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     opacity: 0.4;
     font-size: 1.4vw;
     font-weight: 900;
@@ -155,15 +156,14 @@ section{
     margin:0;
 }
 .lowBarSection:nth-child(2) > div{
+    /* opactity TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     opacity: 0.4;
-    /* background-color: #0aff02; */
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.1vw;
-    /* flex-direction: column; */
-    /* grid-template-columns:  1fr; */
-    /* grid-template-rows: 1fr; */
+
     justify-items: center;
     align-items: start;
 
@@ -174,7 +174,9 @@ section{
 
 }
 .lowBarSection:nth-child(2) button{
+    /* event NONE TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     pointer-events: none;
+
     width: 30%;
     height: 45%;
     font-size: 0.8vw;
