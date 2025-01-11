@@ -26,7 +26,7 @@ let previousTile ;
 
 const questButtonsWrapper = document.querySelector('.lowBarSection:nth-child(1) > div');
 
-// //////////////////////////////////////////////////////////
+// ////////////////////GET TILE COORDS////////////////////////////
 mapGrid.addEventListener('click', (event) =>{
 
     if (event.target === event.currentTarget){
@@ -50,7 +50,7 @@ mapGrid.addEventListener('click', (event) =>{
     inputX.value = collumnX + 5;
     inputY.value =rowY + 80;    
 
-    if(mapGrid.children.length > 1){
+    if(mapGrid.children.length > 1){ //remove all other tiles
         for( let i = mapGrid.children.length -1; i >= 1; i--){
             mapGrid.removeChild(mapGrid.children[i]);   
         };
@@ -58,12 +58,9 @@ mapGrid.addEventListener('click', (event) =>{
 
     mapGrid.appendChild(clickedTile);
 
-
-    
     }else{
         mapGrid.removeChild(mapGrid.children[1]);
     };
-
 });
 
 // //////////////////////////////////////////////////////////
@@ -104,15 +101,6 @@ findTileButton.addEventListener('click',(e)=>{
 for (let i = 0; i <= 8; i++){
     questButtonsWrapper.children[i].addEventListener('click', (event) => {
 
-        // if (mapGrid.children.length > 0){
-        //     for(let c = mapGrid.children.length - 1; c >= 1; c--){
-
-        //         const childToRemove = mapGrid.children[c];
-        //         mapGrid.removeChild(childToRemove);
-        //         console.log('x');
-
-        //     };
-        // };
         if(mapGrid.children.length > 1){
             for( let x = mapGrid.children.length -1; x >= 1; x--){
                 mapGrid.removeChild(mapGrid.children[x]);   
@@ -125,9 +113,6 @@ for (let i = 0; i <= 8; i++){
                 const gridXcoord = (quests[i])[y][0] - 5;
                 const gridYcoord = (quests[i])[y][1] - 80;
 
-                // console.log(gridXcoord, gridYcoord, 'x');
-
-
                 const questMarker = document.createElement('div');
                 questMarker.style.gridColumn = `${gridXcoord}`;
                 questMarker.style.gridRow = `${gridYcoord}`;
@@ -137,9 +122,7 @@ for (let i = 0; i <= 8; i++){
                 mapGrid.appendChild(questMarker);
 
                 tile.style.display ='none';
-                console.log('step');
                 
-
             };
 
         }

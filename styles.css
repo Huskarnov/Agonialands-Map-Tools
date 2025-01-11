@@ -70,11 +70,11 @@ section{
     gap: 1vw;
 
     position:fixed;
-    width: 50vw;
+    width: 80vw;
     height: 15vh;
 
     bottom: 2%;
-    left: 2%;;
+    left: 9%;;
 
     background-image: url('toolsBg2.jpg'); 
     background-size: cover;
@@ -104,6 +104,7 @@ section{
     border-radius: 0.2vw;
 
 }
+/* ///////////////////////////////////////////////////////////////// */
 
 .lowBarSection:nth-child(1) > h1{
     font-size: 1.4vw;
@@ -199,7 +200,7 @@ section{
 
 /* ///////////////////////////////////////////////////////////////// */
 
-.lowBarSection:last-child > button{
+.lowBarSection:nth-child(3) > button{
 
     width: 90%;
     height: 45%;
