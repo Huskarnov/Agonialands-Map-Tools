@@ -1,9 +1,11 @@
-/* branch */
 
 
 body{
 
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(sectionBg.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
 
 }
 *{
@@ -15,8 +17,10 @@ body{
 
 section{
 
-    background-color: red;
-    width: 100dvw;
+    top: 13vh;
+
+    position: relative;
+    min-width: 4019px;
 }
 .lowBar{
     display: flex;
@@ -24,8 +28,10 @@ section{
     align-items: center;
 
     position:fixed;
-    width: 100%;
+    width: 95vw;
     height: 15vh;
+
+    left: 2vw;
 
     z-index: 2;
 
@@ -37,17 +43,23 @@ section{
 
     overflow: hidden;
 
-    box-shadow: 0 0 0.1vw 0.2vw #721408 inset;
+    box-shadow: 0 0 6vw 0.1vw #721408 inset;
+    border-bottom: 0.2vw solid #721408;
+    border-left: 0.2vw solid #721408;
+    border-right: 0.2vw solid #721408;
+
     padding: 0.4vw;
 
 }
 /* 4019 3313 
    321  265*/
 .mapGrid{
+
+
     width: 4019px;
     height: 3313px;
 
-    background-image: url('map.webp'); 
+    background-image: url('agoniamap4.webp'); 
     background-size: cover;
     
     display: grid;
@@ -101,7 +113,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     
     background-color: #412e0518;
 
@@ -120,8 +132,6 @@ button, h1{
     color: white;
     text-shadow: 0.1vw 0.1vw 0.5vw black;
 
-    padding: 0;
-    padding-top: 1vh;
 }
 .lowBarSection:nth-child(1) > div{
     display: flex;
@@ -273,15 +283,21 @@ input::-webkit-inner-spin-button {
 }
 
 /* ///////////////////////////////////////////////////////////////// */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     
 section{
     overflow: scroll;
+    min-width: auto;
 
 }
 .lowBar{
 
-        overflow: scroll;
+    display: fixed;
+    width: 100%;
+    left: auto;
+
+    box-shadow: 0 0 150px 2px #721408 inset;
+    border-bottom: 2px solid #721408;
 
     }
 
