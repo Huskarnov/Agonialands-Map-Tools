@@ -1,7 +1,11 @@
+/* branch */
+
+
 body{
+
     background-color: black;
+
 }
-/* ---- */
 *{
     font-family: 'MedievalSharp';
     padding: 0;
@@ -10,11 +14,31 @@ body{
 }
 
 section{
-    /* width: auto;
-    height: auto; */
 
-    display: grid; 
-    justify-items: center;
+    background-color: red;
+    width: 100dvw;
+}
+.lowBar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position:fixed;
+    width: 100%;
+    height: 15vh;
+
+    z-index: 2;
+
+    /* bottom: 2%;
+    left: 9%;; */
+
+    background-image: url('toolsBg2.jpg'); 
+    background-size: cover;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 0.1vw 0.2vw #721408 inset;
+    padding: 0.4vw;
 
 }
 /* 4019 3313 
@@ -29,6 +53,7 @@ section{
     display: grid;
     grid-template-columns: repeat(321, 12.5px);
     grid-template-rows: repeat(265, 12.5px);
+
 
 }
 
@@ -45,7 +70,6 @@ section{
     z-index: 2;
     border: 2px solid white;
     box-shadow: 0 0 80px 15px #f6fff6;
-
 }
 
 .glowy{
@@ -71,28 +95,7 @@ section{
 
 }
 
-.lowBar{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1vw;
 
-    position:fixed;
-    width: 80vw;
-    height: 15vh;
-
-    bottom: 2%;
-    left: 9%;;
-
-    background-image: url('toolsBg2.jpg'); 
-    background-size: cover;
-
-    overflow: hidden;
-
-    border-radius: 5% 5% 0% 0% / 50% 50% 30% 30%  ;
-    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw #721408;
-
-}
 
 .lowBarSection{ 
     display: flex;
@@ -100,21 +103,16 @@ section{
     align-items: center;
     justify-content: start;
     
-
     background-color: #412e0518;
 
     width: 25%;
     height: 90%;
 
-    gap: 0.3vw;
-
-    border-radius: 0.2vw;
-
 }
 button, h1{
     user-select: none;
 }
-/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////QESTS////////////////////////////////// */
 
 .lowBarSection:nth-child(1) > h1{
     font-size: 1.4vw;
@@ -124,7 +122,6 @@ button, h1{
 
     padding: 0;
     padding-top: 1vh;
-    margin:0;
 }
 .lowBarSection:nth-child(1) > div{
     display: flex;
@@ -152,7 +149,7 @@ button, h1{
     background-color: #083806;
 }
 
-/* ///////////////////////////////////////////////////////////////// */
+/* /////////////////////////METALS//////////////////////////////////////// */
 .lowBarSection:nth-child(2) > h1{
 
     font-size: 1.4vw;
@@ -162,7 +159,6 @@ button, h1{
 
     padding: 0;
     padding-top: 1vh;
-    margin:0;
 }
 .lowBarSection:nth-child(2) > div{
 
@@ -211,13 +207,10 @@ button, h1{
     background: linear-gradient(146deg, rgba(24,118,108,1) 0%, rgba(7,19,7,1) 12%, rgba(74,47,20,1) 49%, rgba(7,19,7,1) 88%, rgba(24,118,108,1) 100%);
 
 }
-/* .lowBarSection:nth-child(2) button:nth-child(5){
-    background: linear-gradient(189deg, rgba(221,184,96,1) 13%, rgba(163,139,14,1) 29%, rgba(133,118,25,1) 33%, rgba(154,112,35,1) 50%, rgba(117,83,22,1) 72%, rgba(123,110,22,1) 88%, rgba(223,186,97,1) 100%);
-
-} */
 
 
-/* ///////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////TILE FINDER/////////////////////////////////// */
 
 .lowBarSection:nth-child(3) > button{
 
@@ -265,52 +258,31 @@ button, h1{
     font-weight: 600;
 
     border:none;
-    outline: none;
-    padding: none;
-    margin: none;
 
     text-align: center;
-    text-indent: 0;
-    line-height: 0;
     white-space:unset;
 
     background-color: #000000af;
     color: white;
 
-    
-
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     appearance: none;
-    margin: 0; 
 }
 
 /* ///////////////////////////////////////////////////////////////// */
-/* @media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     
-.lowBar{
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1vw;
-
-    position:fixed;
-    width: 80vw;
-    height: 15vh;
-
-    bottom: 2%;
-    left: 9%;;
-
-    background-image: url('toolsBg2.jpg'); 
-    background-size: cover;
-
-    overflow: hidden;
-
-    border-radius: 5% 5% 0% 0% / 50% 50% 30% 30%  ;
-    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw #721408;
+section{
+    overflow: scroll;
 
 }
+.lowBar{
 
-} */
+        overflow: scroll;
+
+    }
+
+}
