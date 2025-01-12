@@ -15,7 +15,8 @@ const quests = [
     [[247,167],[238,199],[314,215],[262,283],[213,188],[261,146],[217,92]],
     [[212,171],[194,93],[236,151],[222,265],[231,288]],
     [[204,207],[211,120],[249,285],[211,220]],
-    [[245,132],[215,189],[190,194],[204,161]]
+    [[245,132],[215,189],[190,194],[204,161]],
+    [[212,191],[185,129],[186,284]]
 ];
 
 
@@ -74,8 +75,13 @@ mapGrid.addEventListener('click', (event) =>{
     };
     
 });
-
-// //////////////////////////////////////////////////////////
+// /////////////////////////ESCAPE TILES CLEAR EVENT///////////////////////////////////
+document.addEventListener('keydown', (event)=>{
+    if(event.key === 'Escape'){
+        clearGrid();
+    };
+});
+// ///////////////////////////TILE FINDER EVENT///////////////////////////////
 findTileButton.addEventListener('click',(e)=>{
     e.preventDefault()
     const inputX = document.querySelector('#xCoord');
@@ -103,64 +109,7 @@ findTileButton.addEventListener('click',(e)=>{
             alert('Coordinates in outer space, get back Elon');
         };        
 });
-// //////////////////////////////////////////////////////////
-
-//give quest buttons activation
-// for (let i = 0; i <= 8; i++){
-//     questButtonsWrapper.children[i].addEventListener('click', (event) => {
-
-//         clearGrid();
-        
-
-//         for( let y = quests[i].length - 1; y >=0; y--){
-        
-//                 const gridXcoord = (quests[i])[y][0] - 5;
-//                 const gridYcoord = (quests[i])[y][1] - 80;
-
-//                 const questMarker = document.createElement('div');
-//                 questMarker.style.gridColumn = `${gridXcoord - 1}`;
-//                 questMarker.style.gridRow = `${gridYcoord}`;
-//                 questMarker.classList.add('tile');
-//                 questMarker.classList.add('glowy');
-//                 questMarker.style.display = 'block';
-//                 mapGrid.appendChild(questMarker);
-
-//                 tile.style.display ='none';
-                
-//             };
-
-//         }
-//     );
-// };
-// //////////////////////////////////////////////////////////
-
-// for (let g = 0; g <= 3; g++){
-//     metalButtonsWrapper.children[g].addEventListener('click', (event) => {
-
-//         clearGrid();
-        
-
-//         for( let y = metals[g].length - 1; y >=0; y--){
-        
-//                 const gridXcoord = (metals[g])[y][0] - 5;
-//                 const gridYcoord = (metals[g])[y][1] - 80;
-
-//                 const metalMarker = document.createElement('div');
-//                 metalMarker.style.gridColumn = `${gridXcoord - 1}`;
-//                 metalMarker.style.gridRow = `${gridYcoord}`;
-//                 metalMarker.classList.add('tile');
-//                 metalMarker.classList.add('glowy');
-//                 metalMarker.style.display = 'block';
-//                 mapGrid.appendChild(metalMarker);
-
-//                 tile.style.display ='none';
-                
-//             };
-
-//         }
-//     );
-// };
-// //////////////////////////////////////////////////////////
+// ///////////////////////FEED button events to QUEST METAL BUTTONS///////////////////////////////
 const buttonsEvents = function(data, buttonWrapper){
     for (let g = 0; g <= buttonWrapper.children.length - 1; g++){
         buttonWrapper.children[g].addEventListener('click', (event) => {
