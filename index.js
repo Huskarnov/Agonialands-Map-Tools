@@ -45,6 +45,7 @@ const lowBarSection4Quests = document.querySelector('.lowBarSection:nth-child(4)
 const lowBarSection4Metals = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(2)');
 const lowBarSection4TileFinder = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(3)');
 
+const backButton = document.querySelector('.back');
 
 // ////////////////////GET TILE COORDS////////////////////////////
 mapGrid.addEventListener('click', (event) =>{
@@ -181,3 +182,5 @@ lowBarSection4TileFinder.addEventListener('click', ()=>{
     lowBarSection3.style.display = 'flex'
     lowBarSection4.style.display = 'none'
 });
+
+// backButton.addEventListener('click',clearLowBar()); 
