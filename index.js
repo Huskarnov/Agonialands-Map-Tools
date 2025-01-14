@@ -26,7 +26,7 @@ const quests = [
     321 265 */
 
 const mapGrid = document.querySelector('.mapGrid');
-const findTileButton = document.querySelector('.lowBarSection:last-child button');
+const findTileButton = document.querySelector('.lowBarSection:nth-child(3) button');
 const tile = document.querySelector('.tile');
 const inputX = document.querySelector('#xCoord');
 const inputY = document.querySelector('#yCoord');
@@ -35,6 +35,15 @@ const inputWrapperY = document.querySelector('.inputWrapper:nth-child(2)');
 
 const questButtonsWrapper = document.querySelector('.lowBarSection:nth-child(1) div');
 const metalButtonsWrapper = document.querySelector('.lowBarSection:nth-child(2) div');
+
+const lowBarSection1 = document.querySelector('.lowBarSection:nth-child(1)');
+const lowBarSection2 = document.querySelector('.lowBarSection:nth-child(2)');
+const lowBarSection3 = document.querySelector('.lowBarSection:nth-child(3)');
+const lowBarSection4 = document.querySelector('.lowBarSection:nth-child(4)');
+
+const lowBarSection4Quests = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(1)');
+const lowBarSection4Metals = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(2)');
+const lowBarSection4TileFinder = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(3)');
 
 
 // ////////////////////GET TILE COORDS////////////////////////////
@@ -151,3 +160,24 @@ let clearGrid = function(){
         };
     }
 };
+
+let clearLowBar = function(){
+    lowBarSection1.style.display = 'none'
+    lowBarSection2.style.display = 'none'
+    lowBarSection3.style.display = 'none'
+    lowBarSection4.style.display = 'flex'
+}
+
+lowBarSection4Quests.addEventListener('click', ()=>{
+    lowBarSection1.style.display = 'flex'
+    lowBarSection4.style.display = 'none'
+
+});
+lowBarSection4Metals.addEventListener('click', ()=>{
+    lowBarSection2.style.display = 'flex'
+    lowBarSection4.style.display = 'none'
+});
+lowBarSection4TileFinder.addEventListener('click', ()=>{
+    lowBarSection3.style.display = 'flex'
+    lowBarSection4.style.display = 'none'
+});

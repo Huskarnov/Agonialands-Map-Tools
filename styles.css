@@ -280,65 +280,95 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     appearance: none;
 }
+/* //////////////////////////Navbar mobile///////////////////////// */
+.lowBarSection:nth-child(4){
+    display:none;
+}
 
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////// */
 
 @media screen and (max-width: 500px) {
     .lowBar {
-        position: fixed; /* Keep it fixed on mobile as well */
+        position: fixed; 
         width: 100vw;
         left: 0;
-        box-shadow: 0 0 10vw 0.2vw #721408 inset; /* Adjusted shadow */
-        border-bottom: 0.4vw solid #721408; /* Adjusted border */
-        display: flex; /* Ensure flexbox is still used */
-        flex-direction: column; /* Stack sections vertically */
-        height: auto; /* Let height adjust to content */
-        padding: 1vw; /* Add some padding */
+        box-shadow: 0 0 10vw 0.2vw #721408 inset; 
+        border-bottom: 0.4vw solid #721408;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        height: auto; 
+        padding: 3vw 0;
     }
 
     .lowBarSection {
-        display: block; /* Make sections stack vertically */
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Let height adjust to content */
-        margin-bottom: 2vw; /* Add spacing between sections */
+        display: block; 
+        width: 100%; 
+        height: auto; 
     }
 
-    .lowBarSection:nth-child(1),.lowBarSection:nth-child(2){
+    .lowBarSection:nth-child(3),.lowBarSection:nth-child(1),.lowBarSection:nth-child(2){
         display: none;
     }
 
     /*
-    ,.lowBarSection:nth-child(3)
+    
      */
+    .lowBarSection:nth-child(1), .lowBarSection:nth-child(2){
+        /* display: flex; */
+        flex-direction: column;
+        gap: 1vh;
+    }
+    .lowBarSection:nth-child(1) > div{
+        display: flex;
+        gap: 1vw;
+    }
     .lowBarSection:nth-child(1) button {
-        font-size: 3vw; /* Increased font size for mobile */
-        width: 30%;
-        height: auto; /* Reset height */
-        padding: 1vw; /* Add some padding to buttons */
-        margin: 0.5vw;
+        font-size: 3vw;
+        width: 15%;
+        height: auto;
+        padding: 1vw; 
     }
     .lowBarSection:nth-child(2) button {
-        font-size: 3vw; /* Increased font size for mobile */
+        font-size: 3vw; 
         width: 45%;
-        height: auto; /* Reset height */
-        padding: 1vw; /* Add some padding to buttons */
+        height: auto; 
+        padding: 1vw; 
         margin: 0.5vw;
     }
-    .lowBarSection:nth-child(3){
-        text-align: center;
+    /* --------------------------------------------------flex */
+    /* --------------------------------------------------flex */
+    .lowBarSection:nth-child(3){ 
+        /* display: flex; */
+        flex-direction: column;
     }
     .lowBarSection:nth-child(3) button {
-        font-size: 4vw; /* Increased font size for mobile */
+        font-size: 4vw;
         width: 50%;
-        height: 5vh; /* Reset height */
-        padding: 1vw; /* Add some padding to buttons */
+        height: 5vh;
+        padding: 1vw; 
         margin-bottom: 2vw;
     }
     .lowBarSection:nth-child(1) > h1,
     .lowBarSection:nth-child(2) > h1{
         font-size: 4vw;
         text-align: center;
-        margin: 2vw 0;
+    }
+
+    .coordinates{
+        display: flex;
+        gap: 5%;
+
+        justify-items: center;
+        align-items: center;
+    
+        height: 50%;
+        width: 50%;    
+    
+        overflow: hidden;
     }
 
     .inputWrapper{
@@ -348,44 +378,31 @@ input::-webkit-inner-spin-button {
     .lowBarSection input{
         font-size: 4vw;
     }
+
+    .lowBarSection:nth-child(4){
+        display:flex;
+        flex-direction: row;
+        gap: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .lowBarSection:nth-child(4) > button{
+    
+        font-size: 4.5vw;
+        width: 28%;
+        height: auto;
+        padding: 1vw; 
+        font-weight: 900;
+        color: white;
+        
+        border-radius: 0.5vw;
+        border-width: 0.2vw;
+    
+        background-color: #721408e8;
+    
+            
+    }
 }
-
-/* 
-.coordinates{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
-
-    height: 50%;
-    width: 100%;
-
-    overflow: hidden;
-}
-.inputWrapper{
-    display: flex;
-    overflow: hidden;
-
-
-    border-radius: 0.5vw;
-    box-shadow: 0.1vw 0.1vw 0.1vw 0.05vw black;
-
-}
-
-.lowBarSection input{
-    width: 100%;
-    height: 100%;
-
-    font-size: 1.2vw;
-    font-weight: 600;
-
-    border:none;
-
-    text-align: center;
-    white-space:unset;
-
-    background-color: #000000af;
-    color: white;
-
-} */
+/* --------------------------------------------------hide */
+/* --------------------------------------------------hide */
