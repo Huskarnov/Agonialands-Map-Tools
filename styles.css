@@ -409,8 +409,14 @@ input::-webkit-inner-spin-button {
             
     }
 
-    .back{
+    .lowBarSection:nth-child(3) .back{
+        position: absolute;
+        top: 3vw;
+        right: 5.5vw;
         display: block;
+        width: 13%;
+        height: 80%;
+
     }
 }
 /* --------------------------------------------------hide */
