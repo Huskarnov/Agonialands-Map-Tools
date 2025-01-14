@@ -296,14 +296,14 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 500px) {
     .lowBar {
         position: fixed; 
-        width: 100vw;
+        width: 100%;
+        height: 10%;
         left: 0;
         box-shadow: 0 0 10vw 0.2vw #721408 inset; 
         border-bottom: 0.4vw solid #721408;
         display: flex; 
         justify-content: center;
         align-items: center;
-        height: auto; 
         padding: 3vw 0;
     }
 
@@ -327,20 +327,28 @@ input::-webkit-inner-spin-button {
     }
     .lowBarSection:nth-child(1) > div{
         display: flex;
-        gap: 1vw;
+        gap: 5vw;
     }
     .lowBarSection:nth-child(1) button {
-        font-size: 3vw;
+        font-size: 15vw;
         width: 15%;
         height: auto;
-        padding: 1vw; 
+        padding: 2vw ; 
+
+        border-radius: 10vw;
+
+    }
+    .lowBarSection:nth-child(2) > div{
+        display: flex;
+        gap: 5vw;
     }
     .lowBarSection:nth-child(2) button {
-        font-size: 3vw; 
+        font-size: 15vw; 
         width: 45%;
-        height: auto; 
+        height: 20vw; 
         padding: 1vw; 
         margin: 0.5vw;
+
     }
     /* --------------------------------------------------flex */
     /* --------------------------------------------------flex */
@@ -351,15 +359,19 @@ input::-webkit-inner-spin-button {
     }
     .lowBarSection:nth-child(3) button {
         gap: 1vw;
-        font-size: 4vw;
+        font-size: 15vw;
         width: 50%;
-        height: 5vh;
-        padding: 1vw; 
+        height: 40%vh;
+        padding: 5vw; 
         /* margin-bottom: 2vw; */
+
+        border-radius: 15vw;
+        border-style:ridge;
+        border-width: 2vw;
     }
     .lowBarSection:nth-child(1) > h1,
     .lowBarSection:nth-child(2) > h1{
-        font-size: 4vw;
+        font-size: 20vw;
         text-align: center;
     }
 
@@ -370,7 +382,7 @@ input::-webkit-inner-spin-button {
         justify-items: center;
         align-items: center;
     
-        height: 50%;
+        height: 30vw;
         width: 50%;    
     
         overflow: hidden;
@@ -378,30 +390,40 @@ input::-webkit-inner-spin-button {
 
     .inputWrapper{
         width: 50%;
-        height: 4vh;
+        height: 30vw;
+
+        border-radius: 15vw;
+        /* border-style:ridge; */
+        border-width: 2vw;
     }
     .lowBarSection input{
-        font-size: 4vw;
+        font-size: 15vw;
+        caret-color: white;
+
+        
     }
+
 
     .lowBarChoice{
         display:flex;
         flex-direction: row;
-        gap: 5%;
+        gap: 15vw;
         justify-content: center;
         align-items: center;
+
+        width: 100%
     }
     
     .lowBarChoice > button{
     
-        font-size: 4.5vw;
-        width: 30%;
-        height: 60px;
-        padding: 1vw; 
+        font-size: 15vw;
+        width: 100vw;
+        height: 25vh;
+        padding: 10vw 15vw; 
         font-weight: 900;
         color: white;
         
-        border-radius: 0.5vw;
+        border-radius: 10vw;
         border-width: 0.2vw;
     
         background-color: #721408e8;
@@ -411,12 +433,16 @@ input::-webkit-inner-spin-button {
 
     .lowBarSection:nth-child(3) .back{
         position: absolute;
-        top: 3vw;
-        right: 5.5vw;
+        /* top: 3vw; */
+        right: 25vw;
         display: block;
         width: 13%;
-        height: 80%;
+        height: 69%;
 
+    }
+
+    section{
+        top: 30vh;
     }
 }
 /* --------------------------------------------------hide */
