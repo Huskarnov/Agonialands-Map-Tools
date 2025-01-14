@@ -281,10 +281,13 @@ input::-webkit-inner-spin-button {
     appearance: none;
 }
 /* //////////////////////////Navbar mobile///////////////////////// */
-.lowBarSection:nth-child(4){
+.lowBarChoice{
     display:none;
 }
 
+/* .back{
+    display: none;
+} */
 /* ///////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////// */
@@ -343,14 +346,16 @@ input::-webkit-inner-spin-button {
     /* --------------------------------------------------flex */
     .lowBarSection:nth-child(3){ 
         /* display: flex; */
+        gap: 1vh;
         flex-direction: column;
     }
     .lowBarSection:nth-child(3) button {
+        gap: 1vw;
         font-size: 4vw;
         width: 50%;
         height: 5vh;
         padding: 1vw; 
-        margin-bottom: 2vw;
+        /* margin-bottom: 2vw; */
     }
     .lowBarSection:nth-child(1) > h1,
     .lowBarSection:nth-child(2) > h1{
@@ -379,7 +384,7 @@ input::-webkit-inner-spin-button {
         font-size: 4vw;
     }
 
-    .lowBarSection:nth-child(4){
+    .lowBarChoice{
         display:flex;
         flex-direction: row;
         gap: 5%;
@@ -387,11 +392,11 @@ input::-webkit-inner-spin-button {
         align-items: center;
     }
     
-    .lowBarSection:nth-child(4) > button{
+    .lowBarChoice > button{
     
         font-size: 4.5vw;
-        width: 28%;
-        height: auto;
+        width: 30%;
+        height: 60px;
         padding: 1vw; 
         font-weight: 900;
         color: white;

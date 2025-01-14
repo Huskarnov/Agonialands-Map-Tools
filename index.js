@@ -39,11 +39,11 @@ const metalButtonsWrapper = document.querySelector('.lowBarSection:nth-child(2) 
 const lowBarSection1 = document.querySelector('.lowBarSection:nth-child(1)');
 const lowBarSection2 = document.querySelector('.lowBarSection:nth-child(2)');
 const lowBarSection3 = document.querySelector('.lowBarSection:nth-child(3)');
-const lowBarSection4 = document.querySelector('.lowBarSection:nth-child(4)');
+const lowBarSection4 = document.querySelector('.lowBarChoice');
 
-const lowBarSection4Quests = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(1)');
-const lowBarSection4Metals = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(2)');
-const lowBarSection4TileFinder = document.querySelector('.lowBarSection:nth-child(4) button:nth-child(3)');
+const lowBarSection4Quests = document.querySelector('.lowBarChoice button:nth-child(1)');
+const lowBarSection4Metals = document.querySelector('.lowBarChoice button:nth-child(2)');
+const lowBarSection4TileFinder = document.querySelector('.lowBarChoice button:nth-child(3)');
 
 const backButton = document.querySelector('.back');
 
@@ -124,7 +124,9 @@ findTileButton.addEventListener('click',(e)=>{
 const buttonsEvents = function(data, buttonWrapper){
     for (let g = 0; g <= buttonWrapper.children.length - 1; g++){
         buttonWrapper.children[g].addEventListener('click', (event) => {
-    
+
+            clearLowBar();
+            
             clearGrid();
             
     
@@ -162,11 +164,15 @@ let clearGrid = function(){
     }
 };
 
-let clearLowBar = function(){
+function clearLowBar(){
+
+    if(window.innerWidth){
     lowBarSection1.style.display = 'none'
     lowBarSection2.style.display = 'none'
     lowBarSection3.style.display = 'none'
     lowBarSection4.style.display = 'flex'
+};
+
 }
 
 lowBarSection4Quests.addEventListener('click', ()=>{
@@ -183,4 +189,11 @@ lowBarSection4TileFinder.addEventListener('click', ()=>{
     lowBarSection4.style.display = 'none'
 });
 
-// backButton.addEventListener('click',clearLowBar()); 
+backButton.addEventListener('click',()=>{
+    clearLowBar()
+}); 
+
+// setInterval(() => {
+//     clearLowBar()
+
+// }, 1000);
