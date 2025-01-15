@@ -107,6 +107,13 @@ findTileButton.addEventListener('click',(e)=>{
 
     clearGrid();
 
+        // alert(mapGrid.getBoundingClientRect().width);
+        // globalThis.scrollTo({ top: (2222), left: (2222), behavior: "smooth" });
+
+    // globalThis.scrollTo({ top: (((inputY.value - 6)*(12.5))), left: ((inputX.value - 80)*(12.5)), behavior: "smooth" });
+
+        // 265 321 
+
     setTimeout(() => {
     tile.classList.remove('glowy');
         
@@ -166,7 +173,7 @@ let clearGrid = function(){
 
 function clearLowBar(){
 
-    if(window.innerWidth){
+    if(window.innerWidth < 2000){
     lowBarSection1.style.display = 'none'
     lowBarSection2.style.display = 'none'
     lowBarSection3.style.display = 'none'
