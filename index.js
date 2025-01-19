@@ -173,7 +173,7 @@ let clearGrid = function(){
 
 function clearLowBar(){
 
-    if(window.innerWidth < 2000){
+    if(window.innerHeight > window.innerWidth){
     lowBarSection1.style.display = 'none'
     lowBarSection2.style.display = 'none'
     lowBarSection3.style.display = 'none'
