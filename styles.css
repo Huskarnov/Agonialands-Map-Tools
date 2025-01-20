@@ -29,17 +29,13 @@ section{
 
     position:fixed;
     width: 100%;
-    height: auto;
     
     padding-bottom: 1vh;
-    padding-top: 0.5vh;
 
-    /* left: 2vw; */
 
     z-index: 2;
 
-    /* bottom: 2%;
-    left: 9%;; */
+    padding-top: 1rem;
 
     background-image: url('toolsBg2.jpg'); 
     background-size: cover;
@@ -312,7 +308,7 @@ input::-webkit-inner-spin-button {
         display: flex; 
         justify-content: center;
         align-items: center;
-        /* padding: 5vh 0; */
+        padding: 5vh 0;
 
         border-bottom-left-radius: 11vw ;
         border-bottom-right-radius: 11vw ;
