@@ -31,11 +31,11 @@ section{
     width: 100%;
     
     padding-bottom: 1vh;
+    padding-top: 1vh;
 
 
     z-index: 2;
 
-    padding-top: 1rem;
 
     background-image: url('toolsBg2.jpg'); 
     background-size: cover;
@@ -109,7 +109,7 @@ section{
 
 
 .lowBarSection{ 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -222,7 +222,7 @@ button, h1{
 
 /* //////////////////////////////TILE FINDER/////////////////////////////////// */
 .lowBarSection:nth-child(3){
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1vh;
 }
@@ -240,6 +240,17 @@ button, h1{
 
     background-color: #721408e8;
 }
+
+.lowBarSection:nth-child(3) .back{
+    position: absolute;
+
+    right: 36vw;
+    display: block;
+    width: 5%;
+    height: 80%;
+
+}
+
 .coordinates{
     display: flex;
     justify-content: center;
@@ -285,12 +296,34 @@ input::-webkit-inner-spin-button {
     appearance: none;
 }
 /* //////////////////////////Navbar mobile///////////////////////// */
+
+
+
 .lowBarChoice{
-    display:none;
+    display:flex;
+    flex-direction: row;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
 }
 
-.back{
-    display: none;
+.lowBarChoice > button{
+
+    font-size: 1.4vw;
+    width: 20%;
+    padding: 1vw 2vw; 
+    font-weight: 900;
+    color: white;
+    
+    border-radius: 10vw;
+    border-width: 0.2vw;
+
+    background-color: #721408e8;
+
+        
 }
 /* ///////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////// */
@@ -371,11 +404,9 @@ input::-webkit-inner-spin-button {
         font-size: 15vw;
         width: 50%;
         height: 40%;
-        /* padding: 5vw;  */
-        /* margin-bottom: 2vw; */
+
 
         border-radius: 15vw;
-        border-style:ridge;
         border-width: 2vw;
     }
     .lowBarSection:nth-child(1) > h1,
@@ -402,7 +433,6 @@ input::-webkit-inner-spin-button {
         height: 30vw;
 
         border-radius: 15vw;
-        /* border-style:ridge; */
         border-width: 2vw;
     }
     .lowBarSection input{
@@ -427,22 +457,17 @@ input::-webkit-inner-spin-button {
     
         font-size: 14vw;
         width: 100vw;
-        /* height: 25vh; */
+        
         padding: 10vw 15vw; 
         font-weight: 900;
         color: white;
         
-        border-radius: 10vw;
-        border-width: 0.2vw;
-    
-        background-color: #721408e8;
     
             
     }
 
     .lowBarSection:nth-child(3) .back{
         position: absolute;
-        /* top: 3vw; */
         right: 25vw;
         display: block;
         width: 13%;
@@ -450,9 +475,16 @@ input::-webkit-inner-spin-button {
 
     }
 
+    .back-svg{
+        width: 8rem;
+        height: 8rem;
+    }
     section{
         top: 30vh;
     }
 }
 /* --------------------------------------------------hide */
 /* --------------------------------------------------hide */
+/* --------------------------------------------------hide */
+/* --------------------------------------------------hide */
+

@@ -90,6 +90,7 @@ mapGrid.addEventListener('click', (event) =>{
 document.addEventListener('keydown', (event)=>{
     if(event.key === 'Escape'){
         clearGrid();
+        clearLowBar();
     };
 });
 // ///////////////////////////TILE FINDER EVENT///////////////////////////////
@@ -172,13 +173,13 @@ let clearGrid = function(){
 };
 
 function clearLowBar(){
-
-    if(window.innerHeight > window.innerWidth){
+//window.innerHeight > window.innerWidth
+    
     lowBarSection1.style.display = 'none'
     lowBarSection2.style.display = 'none'
     lowBarSection3.style.display = 'none'
     lowBarSection4.style.display = 'flex'
-};
+
 
 }
 
