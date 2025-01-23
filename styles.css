@@ -131,6 +131,9 @@ button, h1{
     color: white;
     text-shadow: 0.1vw 0.1vw 0.5vw black;
 
+    margin-bottom: 0.6vw;
+
+
 }
 .lowBarSection:nth-child(1) > div{
     display: flex;
