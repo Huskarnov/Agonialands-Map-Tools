@@ -520,8 +520,8 @@ input::-webkit-inner-spin-button {
         position:fixed;
         width: 100%;
         
-        padding-bottom: 3rem;
-        padding-top: 3rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
     
         z-index: 2;
     
@@ -552,7 +552,7 @@ input::-webkit-inner-spin-button {
     
     .lowBarChoice > button{
     
-        font-size: 7rem;
+        font-size: 6rem;
         width: 30%;
         padding: 1rem; 
         font-weight: 900;
