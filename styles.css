@@ -2,11 +2,11 @@
 
 body{
 
-    /* background-color: black; */
     background-image: url(sectionBg.jpg);
     background-size: cover;
-    /* background-repeat: no-repeat; */
 
+    /* display: flex; */
+    /* justify-content: center; */
 }
 *{
     font-family: 'MedievalSharp';
@@ -16,7 +16,6 @@ body{
 }
 
 section{
-    /* background-color: red; */
     top: 222px;
 
     position: relative;

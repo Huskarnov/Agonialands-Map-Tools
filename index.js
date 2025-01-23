@@ -160,7 +160,7 @@ const buttonsEvents = function(data, buttonWrapper){
                     metalMarker.style.gridRow = `${gridYcoord}`;
                     
                     
-                    if(y == 0){
+                    if(y == 0 && (data.length > 6)){
                         metalMarker.classList.add('tile-giver');
                         metalMarker.classList.add('glowy-giver');
                     }else{
