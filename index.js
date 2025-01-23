@@ -221,7 +221,3 @@ backButton.addEventListener('click',()=>{
     clearLowBar()
 }); 
 
-// setInterval(() => {
-//     clearLowBar()
-
-// }, 1000);

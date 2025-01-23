@@ -510,4 +510,176 @@ input::-webkit-inner-spin-button {
 /* --------------------------------------------------hide */
 /* --------------------------------------------------hide */
 /* --------------------------------------------------hide */
+@media screen and (orientation: landscape) and (max-width:1000px){
 
+    .lowBar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: start;
+
+        position:fixed;
+        width: 100%;
+        
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    
+        z-index: 2;
+    
+        background-image: url('toolsBg2.jpg'); 
+        background-size: cover;
+    
+        overflow: hidden;
+    
+        box-shadow: 0 0 1rem 0.1rem #721408 inset;
+        border-bottom: 0.2rem solid #721408;
+        border-left: 0.2rem solid #721408;
+        border-right: 0.2rem solid #721408;
+    
+        border-bottom-left-radius: 2rem ;
+        border-bottom-right-radius: 2rem ;
+    }
+
+    .lowBarChoice{
+        display:flex;
+        flex-direction: row;
+        gap: 1%;
+        justify-content: center;
+        align-items: center;
+    
+        width: 100%;
+    
+    }
+    
+    .lowBarChoice > button{
+    
+        font-size: 7rem;
+        width: 30%;
+        padding: 1rem; 
+        font-weight: 900;
+        color: white;
+        
+        border-radius: 10vw;
+        border-width: 0.2vw;
+    
+        background-color: #721408e8;
+    
+            
+    }
+    
+    .lowBarSection {
+        display: block; 
+        width: 100%; 
+        height: auto; 
+    }
+
+    .lowBarSection:nth-child(3),.lowBarSection:nth-child(1),.lowBarSection:nth-child(2){
+        display: none;
+    }
+
+    /*
+    
+     */
+    .lowBarSection:nth-child(1), .lowBarSection:nth-child(2){
+        /* display: flex; */
+        flex-direction: column;
+        gap: 1vh;
+    }
+    .lowBarSection:nth-child(1) > div{
+        display: flex;
+        gap: 5vw;
+    }
+    .lowBarSection:nth-child(1) button {
+        font-size: 4rem;
+        width: 15%;
+        height: auto;
+        padding: 2vw ; 
+
+        border-radius: 10vw;
+
+    }
+    .lowBarSection:nth-child(2) > div{
+        display: flex;
+        gap: 5vw;
+    }
+    .lowBarSection:nth-child(2) button {
+        font-size: 15vw; 
+        width: 45%;
+        height: 20vw; 
+        /* padding: 1vw;  */
+        margin: 0.5vw;
+
+        border-radius: 10vw;
+
+    }
+    /* --------------------------------------------------flex */
+    /* --------------------------------------------------flex */
+    .lowBarSection:nth-child(3){ 
+        /* display: flex; */
+        gap: 3vh;
+        flex-direction: column;
+    }
+    .lowBarSection:nth-child(3) button {
+        gap: 1vw;
+        font-size: 15vw;
+        width: 50%;
+        height: 40%;
+
+
+        border-radius: 15vw;
+        border-width: 2vw;
+    }
+    .lowBarSection:nth-child(1) > h1,
+    .lowBarSection:nth-child(2) > h1{
+        font-size: 20vw;
+        text-align: center;
+    }
+
+    .coordinates{
+        display: flex;
+        gap: 5%;
+
+        justify-items: center;
+        align-items: center;
+    
+        height: 30vw;
+        width: 50%;    
+    
+        overflow: hidden;
+    }
+
+    .inputWrapper{
+        width: 50%;
+        height: 30vw;
+
+        border-radius: 15vw;
+        border-width: 2vw;
+    }
+    .lowBarSection input{
+        font-size: 15vw;
+        caret-color: white;
+
+        
+    }
+
+    .lowBarSection:nth-child(3) .back{
+        position: absolute;
+        right: 25vw;
+        display: block;
+        width: 13%;
+        height: 69%;
+
+    }
+
+    .back-svg{
+        width: 8rem;
+        height: 8rem;
+    }
+    section{
+        top: 30vh;
+    }
+
+
+
+
+
+}
