@@ -75,6 +75,14 @@ section{
     border: 2px solid #0aff02;
     z-index: 4;
 }
+.tile-giver{
+    display: none;
+    position: relative;
+    grid-column: 1;  /* 266 - 5*/
+    grid-row: 1;  /* 192 - 80*/
+    border: 2px solid #fffb02;
+    z-index: 4;
+}
 
 .tileToHover{
     position: relative;
@@ -91,6 +99,16 @@ section{
     0%{box-shadow: 0 0 30px 5px #0aff028f;}
     50%{box-shadow: 0 0 30px 50px #0aff02;}
     100%{box-shadow: 0 0 30px 5px #0aff028f;}
+}
+
+.glowy-giver{
+    animation: glow-giver 1s ease-in-out infinite;
+
+}
+@keyframes glow-giver {
+    0%{box-shadow: 0 0 30px 5px #ffe6028f;}
+    50%{box-shadow: 0 0 30px 50px #fffb02;}
+    100%{box-shadow: 0 0 30px 5px #ffe6028f;}
 }
 
 .shine{
