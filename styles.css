@@ -394,12 +394,12 @@ input::-webkit-inner-spin-button {
     }
     .lowBarSection:nth-child(1) button {
         font-size: 15vw;
-        width: 15%;
+        width: 20%;
         height: auto;
         padding: 2vw ; 
 
         border-radius: 10vw;
-
+        border-width: 2vw;
     }
     .lowBarSection:nth-child(2) > div{
         display: flex;
@@ -413,6 +413,7 @@ input::-webkit-inner-spin-button {
         margin: 0.5vw;
 
         border-radius: 10vw;
+        border-width: 2vw;
 
     }
     /* --------------------------------------------------flex */
@@ -424,9 +425,9 @@ input::-webkit-inner-spin-button {
     }
     .lowBarSection:nth-child(3) button {
         gap: 1vw;
-        font-size: 15vw;
+        font-size: 7rem;
         width: 50%;
-        height: 40%;
+        height: 60%;
 
 
         border-radius: 15vw;
@@ -484,8 +485,7 @@ input::-webkit-inner-spin-button {
         padding: 10vw 15vw; 
         font-weight: 900;
         color: white;
-        
-    
+        border-width: 1.5vw;
             
     }
 
