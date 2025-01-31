@@ -144,6 +144,18 @@ findTileButton.addEventListener('click',(e)=>{
 // ///////////////////////FEED button events to QUEST METAL BUTTONS///////////////////////////////
 const buttonsEvents = function(data, buttonWrapper){
     for (let g = 0; g <= buttonWrapper.children.length - 1; g++){
+
+        if(data.length > 6){
+            let text = buttonWrapper.children[g].textContent;
+
+            buttonWrapper.children[g].addEventListener('mouseover', ()=>{
+                buttonWrapper.children[g].textContent = `${data[g][0]}`
+            });
+            buttonWrapper.children[g].addEventListener('mouseout',()=>{
+                buttonWrapper.children[g].textContent = text;
+            });
+        };
+
         buttonWrapper.children[g].addEventListener('click', (event) => {
 
             clearLowBar();
