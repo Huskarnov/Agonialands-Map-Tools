@@ -36,18 +36,20 @@ section{
     z-index: 2;
 
 
-    background-image: url('toolsBg2.jpg'); 
-    background-size: cover;
+    /* background-image: url('toolsBg2.jpg'); 
+     */
+    background-color: transparent;
+    /* background-size: cover; */
 
     overflow: hidden;
 
-    box-shadow: 0 0 6vw 0.1vw #721408 inset;
+    /* box-shadow: 0 0 6vw 0.1vw #721408 inset;
     border-bottom: 0.2vw solid #721408;
     border-left: 0.2vw solid #721408;
-    border-right: 0.2vw solid #721408;
-
+    border-right: 0.2vw solid #721408; */
+/* 
     border-bottom-left-radius: 2vw ;
-    border-bottom-right-radius: 2vw ;
+    border-bottom-right-radius: 2vw ; */
 }
 /* 4019 3313 
 321  265*/
