@@ -1,104 +1,112 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agonialands-Map-Tools</title>
-        
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agonialands-Map-Tools</title>
 
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="lowBar">
+      <!-- quests -->
+      <div class="lowBarSection">
+        <h1>Quests</h1>
+        <div>
+          <button>Fauna 1</button>
+          <button>Fauna 2</button>
+          <button>Fauna 3</button>
+          <button>Fauna 4</button>
+          <button>Fauna 5</button>
+          <button>Fauna 6</button>
+          <button>Fauna 7</button>
+          <button>Fauna 8</button>
+          <button>Fauna 9</button>
 
-    </head>
-    <body>
-            
-        <div class="lowBar">
+          <button>SA 1</button>
+          <button>ExPlague</button>
+          <button>SA 2</button>
+          <button>Ice Exp</button>
+          <button>NML 1</button>
+          <button>Lost Contact</button>
+          <button>IP</button>
+          <button>MPS</button>
 
-            <!-- quests -->
-            <div class="lowBarSection"> 
-                
+          <button>TDL</button>
+          <button>TTTT</button>
+        </div>
+      </div>
 
-                <h1>Quests</h1>
-                <div >
-                    <button>Fauna 1</button>
-                    <button>Fauna 2</button>
-                    <button>Fauna 3</button>
-                    <button>Fauna 4</button>
-                    <button>Fauna 5</button>
-                    <button>Fauna 6</button>
-                    <button>Fauna 7</button>
-                    <button>Fauna 8</button>
-                    <button>Fauna 9</button>
+      <!-- metals -->
+      <div class="lowBarSection">
+        <h1>Minerals</h1>
+        <div>
+          <button>Tin</button>
+          <button>Copper</button>
+          <button>Iron</button>
+          <button>Titanium</button>
+          <button>Coal</button>
+        </div>
+      </div>
 
-                    <button>SA 1</button>
-                    <button>ExPlague</button>
-                    <button>SA 2</button>
-                    <button>Ice Exp</button>
-                    <button>NML 1</button>
-                    <button>Lost Contact</button>
-                    <button>IP</button>
-                    <button>MPS</button>
-                    
-                    
-                    <button>TDL</button>
-                    <button>TTTT</button>
-                    
-                    
-                    
-                    
+      <!-- tile finder -->
+      <div class="lowBarSection">
+        <button type="submit">Find a tile</button>
+        <form class="coordinates">
+          <div class="inputWrapper">
+            <input
+              id="xCoord"
+              type="number"
+              min="6"
+              max="327"
+              maxlength="3"
+              placeholder="X"
+            />
+          </div>
+          <div class="inputWrapper">
+            <input
+              id="yCoord"
+              type="number"
+              min="81"
+              max="345"
+              maxlength="3"
+              placeholder="Y"
+            />
+          </div>
+        </form>
+        <button class="back">
+          <svg
+            class="back-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="3vw"
+            height="3vw"
+            viewBox="0 0 24 24"
+          >
+            <path fill="currentColor" d="M20 9v6h-8v4.84L4.16 12L12 4.16V9z" />
+          </svg>
+        </button>
+      </div>
 
-                    
-                </div>
-            </div>
+      <div class="lowBarChoice">
+        <button>Quests</button>
+        <button>Minerals</button>
+        <button>Tile Finder</button>
+      </div>
+    </div>
 
-            <!-- metals -->
-            <div class="lowBarSection">
-                <h1>Minerals</h1>
-                <div>
-                    <button>Tin</button>
-                    <button>Copper</button>
-                    <button>Iron</button>
-                    <button>Titanium</button>
-                    <button>Coal</button>
-                </div>
-            </div>
-            
-            <!-- tile finder -->
-            <div class="lowBarSection">
-                <button type="submit">Find a tile </button>
-                <form class="coordinates">
-                    <div class="inputWrapper"><input id="xCoord" type="number" min="6" max="327" maxlength="3" placeholder="X"></div>
-                    <div class="inputWrapper"><input id="yCoord" type="number"  min="81" max="345" maxlength="3" placeholder="Y"></div>
-                </form>
-                <button class="back"><svg class="back-svg" xmlns="http://www.w3.org/2000/svg" width="3vw" height="3vw" viewBox="0 0 24 24"><path fill="currentColor" d="M20 9v6h-8v4.84L4.16 12L12 4.16V9z"/></svg></button>
-            </div>
+    <section>
+      <div class="mapGrid">
+        <div class="tile"></div>
+      </div>
+    </section>
 
-            <div class="lowBarChoice">
-                <button>Quests</button>
-                <button>Minerals</button>
-                <button>Tile Finder</button>
-            </div>
-
-
-
-        </div> 
-        
-
-            <section>
-                
-
-                <div class="mapGrid">
-                    <div class="tile"></div>
-                </div>
-
-            </section>
-
-            
-            
-            
-            <script src="index.js" type="module"></script>
-    </body>
-    </html>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
